@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.braintreepayments:browser-switch:0.2.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b954efb4b48a61f017c918caa056705/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b954efb4b48a61f017c918caa056705/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b954efb4b48a61f017c918caa056705/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
