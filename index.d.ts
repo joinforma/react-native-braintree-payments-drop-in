@@ -1,4 +1,4 @@
-declare module "joinforma/react-native-braintree" {
+declare module "react-native-braintree-payments-drop-in" {
   export interface BraintreeResponse {
     nonce: string;
   }
