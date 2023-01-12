@@ -11,8 +11,21 @@ declare module "react-native-braintree-payments-drop-in" {
     cvv: number;
     postalCode: number;
   }
+  export interface FetchPaymentMethodNoncesResponse {
+    nonces?: {
+      nonce: string;
+      type: string;
+      lastTwo: string;
+      isDefault:
+      | "yes"
+      | "no";
+    }[];
+    error?: string;
+  }
 
-  // Export
+  export interface FetchPaymentMethodNoncesOptions {
+    clientToken: string;
+  }
 
   interface RNBraintreeModule {
     tokenizeCard(
@@ -22,6 +35,9 @@ declare module "react-native-braintree-payments-drop-in" {
       name: string,
       location: string
     ): Promise<void>;
+    fetchPaymentMethodNonces(
+      options: FetchPaymentMethodNoncesOptions
+    ): Promise<FetchPaymentMethodNoncesResponse>;
   }
 
   const RNBraintree: RNBraintreeModule;

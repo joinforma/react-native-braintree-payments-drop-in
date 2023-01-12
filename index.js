@@ -8,4 +8,5 @@ const { RNBraintreeApplePay } = NativeModules;
 export default {
     runApplePay: RNBraintreeApplePay && RNBraintreeApplePay.runApplePay,
     tokenizeCard: RNBraintree && RNBraintree.tokenizeCard,
+    fetchPaymentMethodNonces: RNBraintree && RNBraintree.fetchPaymentMethodNonces,
 }
