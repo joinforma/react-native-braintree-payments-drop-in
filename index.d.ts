@@ -8,8 +8,8 @@ declare module "react-native-braintree-payments-drop-in" {
     number: string;
     expirationMonth: string;
     expirationYear: string;
-    cvv: number;
-    postalCode: number;
+    cvv: string;
+    postalCode?: string;
   }
   export interface FetchPaymentMethodNoncesResponse {
     nonces?: {
