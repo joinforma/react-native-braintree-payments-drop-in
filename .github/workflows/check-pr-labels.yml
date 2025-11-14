@@ -1,0 +1,16 @@
+---
+# Managed by Terraform : Changes will be overwritten. Do not edit manually
+name: Check Pull Request Labels
+on:
+  pull_request:
+    types: [opened, labeled, unlabeled, synchronize]
+jobs:
+  label:
+    name: check_pr_labels
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mheap/github-action-required-labels@v5
+        with:
+          mode: exactly
+          count: 0
+          labels: 'do not merge, WIP'
