@@ -9,8 +9,12 @@ jobs:
     name: check_pr_labels
     runs-on: ubuntu-latest
     steps:
-      - uses: mheap/github-action-required-labels@v5
+      - uses: actions/github-script@v8
         with:
-          mode: exactly
-          count: 0
-          labels: 'do not merge, WIP'
+          script: |
+            const blockedLabels = ['do not merge', 'WIP'];
+            const prLabels = context.payload.pull_request.labels.map(l => l.name);
+            const found = blockedLabels.filter(l => prLabels.includes(l));
+            if (found.length > 0) {
+              core.setFailed(`PR has blocked label(s): $${found.join(', ')}`);
+            }
