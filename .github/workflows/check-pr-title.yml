@@ -19,7 +19,7 @@ on:
 jobs:
   main:
     name: check_pr_title
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
     permissions:
       pull-requests: read
     steps:
