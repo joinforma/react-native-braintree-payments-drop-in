@@ -9,7 +9,7 @@ jobs:
     name: check_pr_labels
     runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
     steps:
-      - uses: actions/github-script@v8
+      - uses: actions/github-script@v9
         with:
           script: |
             const blockedLabels = ['do not merge', 'WIP'];
